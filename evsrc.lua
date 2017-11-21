@@ -31,8 +31,9 @@ local inspect = require('util').inspect;
 
 --- new
 -- @param srccfg
+-- @param dst
 -- @return src
-local function new( dst, srccfg )
+local function new( srccfg, dst )
     local src = {};
 
     for name, cfg in pairs( srccfg ) do
@@ -48,10 +49,10 @@ local function new( dst, srccfg )
             print(('cannot create source listener: %q - %s'):format(
                 name, err
             ));
+        else
+            print( ('source %s@%s:%d'):format( name, cfg.host, cfg.port ) )
         end
     end
-
-    print( inspect(src) )
 
     return src;
 end

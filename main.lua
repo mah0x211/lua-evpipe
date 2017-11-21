@@ -37,7 +37,7 @@ local EvSrc = require('evpipe.evsrc');
 local function main( pathname )
     local cfg = assert( Config.open( pathname ) );
     local evdst = EvDst.new( cfg.destination );
-    local evsrc = EvSrc.new( evdst, cfg.source );
+    local evsrc = EvSrc.new( cfg.source, evdst );
 
     -- wait
     signal.blockAll();
