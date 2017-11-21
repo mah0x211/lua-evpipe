@@ -12,8 +12,8 @@ description = {
 dependencies = {
     "lua >= 5.1",
     "luarocks-fetch-gitrec >= 0.2",
-    "net >= 0.18.0",
-    "synops >= 0.3.1",
+    "net >= 0.19.1",
+    "synops >= 0.3.3",
 }
 build = {
     type = "builtin",
